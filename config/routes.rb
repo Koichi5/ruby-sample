@@ -1,4 +1,11 @@
+# Rails内ではコントローラを経由してビューを返していますが、ブラウザとコントローラを繋ぐ役割を担うのがルーティングです。
+# ページが表示されるまでに、ルーティング→コントローラ→ビューという順で処理が行われていることを理解しておきましょう。
+
 Rails.application.routes.draw do
+  get "/" => "home#top"
+  get "about" => "home#about"
+
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
